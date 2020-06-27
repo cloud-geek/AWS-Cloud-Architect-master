@@ -1,0 +1,190 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2020.06.26 23:14:57 =~=~=~=~=~=~=~=~=~=~=~=
+Using username "ec2-user".
+Authenticating with public key "imported-openssh-key"
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux 2 AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-2/
+4 package(s) needed for security, out of 10 available
+Run "sudo yum update" to apply all updates.
+]0;ec2-user@ip-10-2-10-59:~[?1034h[ec2-user@ip-10-2-10-59 ~]$ mysql -h mysqldbinstance.c5tg5jm9pavw.us-west-1.rds. amazonaws.com -D udacity -u admin -p[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kmysql -h mysqldbinstance.c5tg5jm9pavw.us-west-1.rds. amazonaws.com -D udacity -u admin -p
+-bash: mysql: command not found
+]0;ec2-user@ip-10-2-10-59:~[ec2-user@ip-10-2-10-59 ~]$ sudo yum install -y https://dev.mysql.com/get/mysql5 7-community-release-el7-11.noarch.rpm
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+mysql57-community-release-el7-11.noarch.rpm              |  25 kB     00:00     
+Examining /var/tmp/yum-root-x3tWWw/mysql57-community-release-el7-11.noarch.rpm: mysql57-community-release-el7-11.noarch
+Marking /var/tmp/yum-root-x3tWWw/mysql57-community-release-el7-11.noarch.rpm to be installed
+Resolving Dependencies
+--> Running transaction check
+---> Package mysql57-community-release.noarch 0:el7-11 will be installed
+--> Finished Dependency Resolution
+amzn2-core/2/x86_64                                      | 3.7 kB     00:00     
+
+Dependencies Resolved
+
+================================================================================
+ Package           Arch   Version
+                                 Repository                                Size
+================================================================================
+Installing:
+ [1mmysql57-community-release(B[m
+                   noarch el7-11 /mysql57-community-release-el7-11.noarch  31 k
+
+Transaction Summary
+================================================================================
+Install  1 Package
+
+Total size: 31 k
+Installed size: 31 k
+Downloading packages:
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : mysql57-community-release-el [                             ] 1/1  Installing : mysql57-community-release-el [#########################    ] 1/1  Installing : mysql57-community-release-el [##########################   ] 1/1  Installing : mysql57-community-release-el [############################ ] 1/1  Installing : mysql57-community-release-el7-11.noarch                      1/1 
+  Verifying  : mysql57-community-release-el7-11.noarch                      1/1 
+
+Installed:
+  mysql57-community-release.noarch 0:el7-11                                     
+
+Complete!
+]0;ec2-user@ip-10-2-10-59:~[ec2-user@ip-10-2-10-59 ~]$ sudo yum install -y mysql-community-client
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+33 packages excluded due to repository priority protections
+Resolving Dependencies
+--> Running transaction check
+---> Package mysql-community-client.x86_64 0:5.7.30-1.el7 will be installed
+--> Processing Dependency: mysql-community-libs(x86-64) >= 5.7.9 for package: mysql-community-client-5.7.30-1.el7.x86_64
+--> Processing Dependency: libtinfo.so.5()(64bit) for package: mysql-community-client-5.7.30-1.el7.x86_64
+--> Processing Dependency: libncurses.so.5()(64bit) for package: mysql-community-client-5.7.30-1.el7.x86_64
+--> Running transaction check
+---> Package mariadb-libs.x86_64 1:5.5.64-1.amzn2 will be obsoleted
+--> Processing Dependency: libmysqlclient.so.18()(64bit) for package: 2:postfix-2.10.1-6.amzn2.0.3.x86_64
+--> Processing Dependency: libmysqlclient.so.18(libmysqlclient_18)(64bit) for package: 2:postfix-2.10.1-6.amzn2.0.3.x86_64
+---> Package mysql-community-libs.x86_64 0:5.7.30-1.el7 will be obsoleting
+--> Processing Dependency: mysql-community-common(x86-64) >= 5.7.9 for package: mysql-community-libs-5.7.30-1.el7.x86_64
+---> Package ncurses-compat-libs.x86_64 0:6.0-8.20170212.amzn2.1.3 will be installed
+--> Running transaction check
+---> Package mysql-community-common.x86_64 0:5.7.30-1.el7 will be installed
+---> Package mysql-community-libs-compat.x86_64 0:5.7.30-1.el7 will be obsoleting
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package                Arch   Version                  Repository         Size
+================================================================================
+Installing:
+ mysql-community-client x86_64 5.7.30-1.el7             mysql57-community  25 M
+ mysql-community-libs   x86_64 5.7.30-1.el7             mysql57-community 2.3 M
+     replacing  mariadb-libs.x86_64 1:5.5.64-1.amzn2
+ mysql-community-libs-compat
+                        x86_64 5.7.30-1.el7             mysql57-community 1.2 M
+     replacing  mariadb-libs.x86_64 1:5.5.64-1.amzn2
+Installing for dependencies:
+ mysql-community-common x86_64 5.7.30-1.el7             mysql57-community 311 k
+ ncurses-compat-libs    x86_64 6.0-8.20170212.amzn2.1.3 amzn2-core        308 k
+
+Transaction Summary
+================================================================================
+Install  3 Packages (+2 Dependent packages)
+
+Total download size: 29 M
+Downloading packages:
+warning: /var/cache/yum/x86_64/2/mysql57-community/packages/mysql-community-common-5.7.30-1.el7.x86_64.rpm: Header V3 DSA/SHA1 Signature, key ID 5072e1f5: NOKEY
+Public key for mysql-community-common-5.7.30-1.el7.x86_64.rpm is not installed
+(1/5): mysql-community-common-5.7.30-1.el7.x86_64.rpm      | 311 kB   00:00     
+(2/5): mysql-community-libs-5.7.30-1.el7.x86_64.rpm        | 2.3 MB   00:00     
+(3/5): mysql-community-libs-compat-5.7.30-1.el7.x86_64.rpm | 1.2 MB   00:00     
+(4/5): ncurses-compat-libs-6.0-8.20170212.amzn2.1.3.x86_64 | 308 kB   00:00     
+(5/5): mysql-community-cli 19% [===             ]  0.0 B/s | 5.7 MB   --:-- ETA (5/5): mysql-community-cli 84% [=============-  ]  23 MB/s |  25 MB   00:00 ETA (5/5): mysql-community-client-5.7.30-1.el7.x86_64.rpm      |  25 MB   00:00     
+--------------------------------------------------------------------------------
+Total                                               31 MB/s |  29 MB  00:00     
+Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-mysql
+Importing GPG key 0x5072E1F5:
+ Userid     : "MySQL Release Engineering <mysql-build@oss.oracle.com>"
+ Fingerprint: a4a9 4068 76fc bd3c 4567 70c8 8c71 8d3b 5072 e1f5
+ Package    : mysql57-community-release-el7-11.noarch (installed)
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-mysql
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : mysql-community-common-5.7.3 [                             ] 1/6  Installing : mysql-community-common-5.7.3 [#                            ] 1/6  Installing : mysql-community-common-5.7.3 [##                           ] 1/6  Installing : mysql-community-common-5.7.3 [###                          ] 1/6  Installing : mysql-community-common-5.7.3 [####                         ] 1/6  Installing : mysql-community-common-5.7.3 [#####                        ] 1/6  Installing : mysql-community-common-5.7.3 [######                       ] 1/6  Installing : mysql-community-common-5.7.3 [#######                      ] 1/6  Installing : mysql-community-common-5.7.3 [########                     ] 1/6  Installing : mysql-community-common-5.7.3 [#########                    ] 1/6  Installing : mysql-community-common-5.7.3 [##########                   ] 1/6  Installing : mysql-community-common-5.7.3 [###########                  ] 1/6  Installing : mysql-community-common-5.7.3 [############                 ] 1/6  Installing : mysql-community-common-5.7.3 [#############                ] 1/6  Installing : mysql-community-common-5.7.3 [##############               ] 1/6  Installing : mysql-community-common-5.7.3 [###############              ] 1/6  Installing : mysql-community-common-5.7.3 [################             ] 1/6  Installing : mysql-community-common-5.7.3 [#################            ] 1/6  Installing : mysql-community-common-5.7.3 [##################           ] 1/6  Installing : mysql-community-common-5.7.3 [###################          ] 1/6  Installing : mysql-community-common-5.7.3 [####################         ] 1/6  Installing : mysql-community-common-5.7.3 [#####################        ] 1/6  Installing : mysql-community-common-5.7.3 [######################       ] 1/6  Installing : mysql-community-common-5.7.3 [#######################      ] 1/6  Installing : mysql-community-common-5.7.3 [########################     ] 1/6  Installing : mysql-community-common-5.7.3 [#########################    ] 1/6  Installing : mysql-community-common-5.7.3 [##########################   ] 1/6  Installing : mysql-community-common-5.7.3 [###########################  ] 1/6  Installing : mysql-community-common-5.7.3 [############################ ] 1/6  Installing : mysql-community-common-5.7.30-1.el7.x86_64                   1/6 
+  Installing : mysql-community-libs-5.7.30- [                             ] 2/6  Installing : mysql-community-libs-5.7.30- [#                            ] 2/6  Installing : mysql-community-libs-5.7.30- [##                           ] 2/6  Installing : mysql-community-libs-5.7.30- [###                          ] 2/6  Installing : mysql-community-libs-5.7.30- [####                         ] 2/6  Installing : mysql-community-libs-5.7.30- [#####                        ] 2/6  Installing : mysql-community-libs-5.7.30- [######                       ] 2/6  Installing : mysql-community-libs-5.7.30- [#######                      ] 2/6  Installing : mysql-community-libs-5.7.30- [########                     ] 2/6  Installing : mysql-community-libs-5.7.30- [#########                    ] 2/6  Installing : mysql-community-libs-5.7.30- [##########                   ] 2/6  Installing : mysql-community-libs-5.7.30- [###########                  ] 2/6  Installing : mysql-community-libs-5.7.30- [############                 ] 2/6  Installing : mysql-community-libs-5.7.30- [#############                ] 2/6  Installing : mysql-community-libs-5.7.30- [##############               ] 2/6  Installing : mysql-community-libs-5.7.30- [###############              ] 2/6  Installing : mysql-community-libs-5.7.30- [################             ] 2/6  Installing : mysql-community-libs-5.7.30- [#################            ] 2/6  Installing : mysql-community-libs-5.7.30- [##################           ] 2/6  Installing : mysql-community-libs-5.7.30- [###################          ] 2/6  Installing : mysql-community-libs-5.7.30- [####################         ] 2/6  Installing : mysql-community-libs-5.7.30- [#####################        ] 2/6  Installing : mysql-community-libs-5.7.30- [######################       ] 2/6  Installing : mysql-community-libs-5.7.30- [#######################      ] 2/6  Installing : mysql-community-libs-5.7.30- [########################     ] 2/6  Installing : mysql-community-libs-5.7.30- [#########################    ] 2/6  Installing : mysql-community-libs-5.7.30- [##########################   ] 2/6  Installing : mysql-community-libs-5.7.30- [###########################  ] 2/6  Installing : mysql-community-libs-5.7.30- [############################ ] 2/6  Installing : mysql-community-libs-5.7.30-1.el7.x86_64                     2/6 
+  Installing : ncurses-compat-libs-6.0-8.20 [                             ] 3/6  Installing : ncurses-compat-libs-6.0-8.20 [#                            ] 3/6  Installing : ncurses-compat-libs-6.0-8.20 [###                          ] 3/6  Installing : ncurses-compat-libs-6.0-8.20 [####                         ] 3/6  Installing : ncurses-compat-libs-6.0-8.20 [#####                        ] 3/6  Installing : ncurses-compat-libs-6.0-8.20 [#######                      ] 3/6  Installing : ncurses-compat-libs-6.0-8.20 [########                     ] 3/6  Installing : ncurses-compat-libs-6.0-8.20 [##########                   ] 3/6  Installing : ncurses-compat-libs-6.0-8.20 [############                 ] 3/6  Installing : ncurses-compat-libs-6.0-8.20 [##############               ] 3/6  Installing : ncurses-compat-libs-6.0-8.20 [###############              ] 3/6  Installing : ncurses-compat-libs-6.0-8.20 [#################            ] 3/6  Installing : ncurses-compat-libs-6.0-8.20 [###################          ] 3/6  Installing : ncurses-compat-libs-6.0-8.20 [####################         ] 3/6  Installing : ncurses-compat-libs-6.0-8.20 [#####################        ] 3/6  Installing : ncurses-compat-libs-6.0-8.20 [######################       ] 3/6  Installing : ncurses-compat-libs-6.0-8.20 [#######################      ] 3/6  Installing : ncurses-compat-libs-6.0-8.20 [#########################    ] 3/6  Installing : ncurses-compat-libs-6.0-8.20 [###########################  ] 3/6  Installing : ncurses-compat-libs-6.0-8.20 [############################ ] 3/6  Installing : ncurses-compat-libs-6.0-8.20170212.amzn2.1.3.x86_64          3/6 
+  Installing : mysql-community-client-5.7.3 [                             ] 4/6  Installing : mysql-community-client-5.7.3 [#                            ] 4/6  Installing : mysql-community-client-5.7.3 [##                           ] 4/6  Installing : mysql-community-client-5.7.3 [###                          ] 4/6  Installing : mysql-community-client-5.7.3 [####                         ] 4/6  Installing : mysql-community-client-5.7.3 [#####                        ] 4/6  Installing : mysql-community-client-5.7.3 [######                       ] 4/6  Installing : mysql-community-client-5.7.3 [#######                      ] 4/6  Installing : mysql-community-client-5.7.3 [########                     ] 4/6  Installing : mysql-community-client-5.7.3 [#########                    ] 4/6  Installing : mysql-community-client-5.7.3 [##########                   ] 4/6  Installing : mysql-community-client-5.7.3 [###########                  ] 4/6  Installing : mysql-community-client-5.7.3 [############                 ] 4/6  Installing : mysql-community-client-5.7.3 [#############                ] 4/6  Installing : mysql-community-client-5.7.3 [##############               ] 4/6  Installing : mysql-community-client-5.7.3 [###############              ] 4/6  Installing : mysql-community-client-5.7.3 [################             ] 4/6  Installing : mysql-community-client-5.7.3 [#################            ] 4/6  Installing : mysql-community-client-5.7.3 [##################           ] 4/6  Installing : mysql-community-client-5.7.3 [###################          ] 4/6  Installing : mysql-community-client-5.7.3 [####################         ] 4/6  Installing : mysql-community-client-5.7.3 [#####################        ] 4/6  Installing : mysql-community-client-5.7.3 [######################       ] 4/6  Installing : mysql-community-client-5.7.3 [#######################      ] 4/6  Installing : mysql-community-client-5.7.3 [########################     ] 4/6  Installing : mysql-community-client-5.7.3 [#########################    ] 4/6  Installing : mysql-community-client-5.7.3 [##########################   ] 4/6  Installing : mysql-community-client-5.7.3 [###########################  ] 4/6  Installing : mysql-community-client-5.7.3 [############################ ] 4/6  Installing : mysql-community-client-5.7.30-1.el7.x86_64                   4/6 
+  Installing : mysql-community-libs-compat- [                             ] 5/6  Installing : mysql-community-libs-compat- [#                            ] 5/6  Installing : mysql-community-libs-compat- [##                           ] 5/6  Installing : mysql-community-libs-compat- [###                          ] 5/6  Installing : mysql-community-libs-compat- [####                         ] 5/6  Installing : mysql-community-libs-compat- [#####                        ] 5/6  Installing : mysql-community-libs-compat- [######                       ] 5/6  Installing : mysql-community-libs-compat- [#######                      ] 5/6  Installing : mysql-community-libs-compat- [########                     ] 5/6  Installing : mysql-community-libs-compat- [#########                    ] 5/6  Installing : mysql-community-libs-compat- [##########                   ] 5/6  Installing : mysql-community-libs-compat- [###########                  ] 5/6  Installing : mysql-community-libs-compat- [############                 ] 5/6  Installing : mysql-community-libs-compat- [#############                ] 5/6  Installing : mysql-community-libs-compat- [##############               ] 5/6  Installing : mysql-community-libs-compat- [###############              ] 5/6  Installing : mysql-community-libs-compat- [################             ] 5/6  Installing : mysql-community-libs-compat- [#################            ] 5/6  Installing : mysql-community-libs-compat- [##################           ] 5/6  Installing : mysql-community-libs-compat- [###################          ] 5/6  Installing : mysql-community-libs-compat- [####################         ] 5/6  Installing : mysql-community-libs-compat- [#####################        ] 5/6  Installing : mysql-community-libs-compat- [######################       ] 5/6  Installing : mysql-community-libs-compat- [#######################      ] 5/6  Installing : mysql-community-libs-compat- [########################     ] 5/6  Installing : mysql-community-libs-compat- [#########################    ] 5/6  Installing : mysql-community-libs-compat- [##########################   ] 5/6  Installing : mysql-community-libs-compat- [###########################  ] 5/6  Installing : mysql-community-libs-compat- [############################ ] 5/6  Installing : mysql-community-libs-compat-5.7.30-1.el7.x86_64              5/6 
+  Erasing    : 1:mariadb-libs-5.5.64-1.amzn2.x86_64                         6/6 
+  Verifying  : ncurses-compat-libs-6.0-8.20170212.amzn2.1.3.x86_64          1/6 
+  Verifying  : mysql-community-libs-5.7.30-1.el7.x86_64                     2/6 
+  Verifying  : mysql-community-client-5.7.30-1.el7.x86_64                   3/6 
+  Verifying  : mysql-community-libs-compat-5.7.30-1.el7.x86_64              4/6 
+  Verifying  : mysql-community-common-5.7.30-1.el7.x86_64                   5/6 
+  Verifying  : 1:mariadb-libs-5.5.64-1.amzn2.x86_64                         6/6 
+
+Installed:
+  mysql-community-client.x86_64 0:5.7.30-1.el7                                  
+  mysql-community-libs.x86_64 0:5.7.30-1.el7                                    
+  mysql-community-libs-compat.x86_64 0:5.7.30-1.el7                             
+
+Dependency Installed:
+  mysql-community-common.x86_64 0:5.7.30-1.el7                                  
+  ncurses-compat-libs.x86_64 0:6.0-8.20170212.amzn2.1.3                         
+
+Replaced:
+  mariadb-libs.x86_64 1:5.5.64-1.amzn2                                          
+
+Complete!
+]0;ec2-user@ip-10-2-10-59:~[ec2-user@ip-10-2-10-59 ~]$ sudo yum install -y mysql-community-clienthttps://dev.mysql.com/get/mysql577-community-release-el7-11.noarch.rpm[Amysql -h mysqldbinstance.c5tg5jm9pavw.us-west-1.rds.a[1Pmazonaws.com -D udacity -u admin -p
+Enter password: 
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 1471
+Server version: 5.7.26 Source distribution
+
+Copyright (c) 2000, 2020, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> SELECT * FROM markler;
++------+------------------+----------+------------+------------------------------+
+| id   | name             | username | password   | email                        |
++------+------------------+----------+------------+------------------------------+
+|    1 | Sachin Tendulkar | Sachin   | cricket007 | sachin.tendulkar@cricket.com |
+|    2 | MS Dhoni         | Dhoni    | cricket008 | ms.dhoni@cricket.com         |
+|    3 | Rohit Sharma     | Rohit    | cricket009 | rohit.sharma@cricket.com     |
+|    4 | Virendar Sehwag  | Sehwag   | cricket001 | virendar.sehwag@cricket.com  |
+|    5 | Ricky Ponting    | Ponting  | cricket002 | ricky.ponting@cricket.com    |
++------+------------------+----------+------------+------------------------------+
+5 rows in set (0.00 sec)
+
+mysql> INSERT INTO markler (id,name,email,username,password) VALUES(5,"Shane Warne","shane.warne@cricket.com","Warne","cricket003");
+ERROR 1290 (HY000): The MySQL server is running with the --read-only option so it cannot execute this statement
+mysql> 
+mysql> 
+mysql> 
+mysql> [8GSELECT * FROM markler;
++------+------------------+----------+------------+------------------------------+
+| id   | name             | username | password   | email                        |
++------+------------------+----------+------------+------------------------------+
+|    1 | Sachin Tendulkar | Sachin   | cricket007 | sachin.tendulkar@cricket.com |
+|    2 | MS Dhoni         | Dhoni    | cricket008 | ms.dhoni@cricket.com         |
+|    3 | Rohit Sharma     | Rohit    | cricket009 | rohit.sharma@cricket.com     |
+|    4 | Virendar Sehwag  | Sehwag   | cricket001 | virendar.sehwag@cricket.com  |
+|    5 | Ricky Ponting    | Ponting  | cricket002 | ricky.ponting@cricket.com    |
++------+------------------+----------+------------+------------------------------+
+5 rows in set (0.00 sec)
+
+mysql> [8GSELECT * FROM markler;[30G[30G[29G[K[28G[K[27G[K[26G[K[25G[K[24G[K[23G[K[22G[K[21G[20G[K[19G[K[18G[K[17G[K[16G[15G[K[14G[13G[K[12G[K[11G[K[10G[K[9G[K[8G[KINSERT INTO markler (id,name,email,username,password) VALUES(5,"Shane Warne","shane.warne@cricket.com","Warne","cricket003");
+ERROR 1290 (HY000): The MySQL server is running with the --read-only option so it cannot execute this statement
+mysql> 

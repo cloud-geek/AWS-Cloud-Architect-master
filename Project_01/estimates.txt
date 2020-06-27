@@ -1,0 +1,21 @@
+
+Recovery Point Objective (RPO) is the maximum amount of time that your system can lose data for. 
+RPO is not tied to whether your system is available, it is a measure of the window of time that you may lose data in.
+
+Recover Time Objective (RTO) is the maximum time your platform or service can be unavailable. 
+If your platform is offline from noon until 5:00pm and you have a 4 hour RTO, then you have failed to maintain your RTO.
+
+
+Recover Time Objective (RTO)
+****************************
+Minimum RTO for a single AZ outage
+	- around 3 minutes. The time taken to spin-up a new RDS EC2 instance.
+Minimum RTO for a single region outage
+	- around 5 minutes. The time taken to promote the standby read replica RDS database into a active one.
+
+Recovery Point Objective (RPO)
+******************************
+Minimum RPO for a single AZ outage
+	- is 0. As the Failover & Recovery from active to standby is done without losing data.
+Minimum RPO for a single region outage
+	- is 0. The replica is done instaneously without losing any data.

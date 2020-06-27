@@ -1,0 +1,62 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2020.06.26 21:53:04 =~=~=~=~=~=~=~=~=~=~=~=
+login as: ec2-user
+Authenticating with public key "imported-openssh-key"
+Last login: Fri Jun 26 19:45:47 2020 from ec2-18-237-140-161.us-west-2.compute.amazonaws.com
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux 2 AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-2/
+No packages needed for security; 2 packages available
+Run "sudo yum update" to apply all updates.
+]0;ec2-user@ip-10-1-10-204:~[?1034h[ec2-user@ip-10-1-10-204 ~]$ mysql -h database-1.crog1yon9keu.us-west-2.rds.amaz onaws.com -D udacity -u admin -p
+Enter password: 
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 2738
+Server version: 5.7.22-log Source distribution
+
+Copyright (c) 2000, 2020, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> CREATE TABLE users(id INT, name VARCHAR(100), username VARCHAR(100), password VA RCHAR(100), email VARCHAR(100));
+ERROR 1050 (42S01): Table 'users' already exists
+mysql> CREATE TABLE markler(id INT, name VARCHAR(100), username VARCHAR(100), pa ssword VARCHAR(100), email VARCHAR(100));
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> INSERT INTO markler (id,name,email,username,password) VALUES(1,"Sachin Te ndulkar","sachin.tendulkar@cricket.com","Sachin","cricket007");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> INSERT INTO markler (id,name,email,username,password) VALUES(2,"MS Dhoni" ,"ms.dhoni@cricket.com","Dhoni","cricket008");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> INSERT INTO markler (id,name,email,username,password) VALUES(3,"Rohit Sha rma","rohit.sharma@cricket.com","Rohit","cricket009");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> INSERT INTO markler (id,name,email,username,password) VALUES(4,"Virendar  Sehwag","virendar.sehwag@cricket.com","Sehwag","cricket001");
+Query OK, 1 row affected (0.22 sec)
+
+mysql> INSERT INTO markler (id,name,email,username,password) VALUES(5,"Ricky Pon ting","ricky.ponting@cricket.com","Ponting","cricket002");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> SELECT * FROM markler;
++------+------------------+----------+------------+------------------------------+
+| id   | name             | username | password   | email                        |
++------+------------------+----------+------------+------------------------------+
+|    1 | Sachin Tendulkar | Sachin   | cricket007 | sachin.tendulkar@cricket.com |
+|    2 | MS Dhoni         | Dhoni    | cricket008 | ms.dhoni@cricket.com         |
+|    3 | Rohit Sharma     | Rohit    | cricket009 | rohit.sharma@cricket.com     |
+|    4 | Virendar Sehwag  | Sehwag   | cricket001 | virendar.sehwag@cricket.com  |
+|    5 | Ricky Ponting    | Ponting  | cricket002 | ricky.ponting@cricket.com    |
++------+------------------+----------+------------+------------------------------+
+5 rows in set (0.00 sec)
+
+mysql> 
