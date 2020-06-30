@@ -1,0 +1,39 @@
+# Identify tools that will allow you to do the following:
+
+## Scan infrastructure as code templates
+
+	- Tool : Terrascan
+
+### Example vulnerability
+
+	- Encryption:		
+		- Use of SSL/TLS and proper configuration
+		- Use of AWS Key Management Service (KMS) with Customer Managed Keys (CMK)
+	- to ensure public exposure:
+		- Services with public exposure other than Gateways (NAT, VGW, IGW)
+
+##Scan AMI’s or containers for OS vulnerabilities
+
+	- Tool: aquasec
+	      : Clair
+		  : Anchore
+
+### Example vulnerability
+
+	- AWS inspector: Once the inspector agent is installed on an instance, it can scan and report:
+		- Common vulnerabilities and exposures or CVE findings
+		- AWS security best practices
+		
+	- Vulnerabilities on instances and containers: Detect
+		- Allowing SSH password login
+		- Vulnerabilities to Django libraries
+		
+##Scan an AWS environment for cloud configuration vulnerabilities
+
+	- AWS SecurityHub: Security Hub can also be enabled to provide a turnkey set of Config rules that will check 
+	                     the AWS account against the CIS AWS foundations and PCI DSS checks.
+
+### Example vulnerability
+
+		- Check the S3 against public read/write access
+		- The Password Policies defined is not met

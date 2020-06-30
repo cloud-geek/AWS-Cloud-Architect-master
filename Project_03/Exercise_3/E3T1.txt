@@ -1,0 +1,11 @@
+# Describe GuardDuty findings that were detected related to the brute force attack
+
+AWS GuardDuty can monitor CloudTrail, DNS, and VPC flow logs to identify suspicious activity. 
+A few examples of activity that GuardDuty can identify:
+
+		- SSH brute force attempts.
+		- API calls from IP addresses that are on threat lists.
+		- Traffic that is destined for crypto-currency related IPs from an EC2 instance.
+		
+	To detect the SSH brute attack, AWS GuardDuty will analyze the source & destination traffic data using the VPC Flow logs. 
+	VPC Flow logs will have information on both the traffic going into and from the EC2 network interfaces.

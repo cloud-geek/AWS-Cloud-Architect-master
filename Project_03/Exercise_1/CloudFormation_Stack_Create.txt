@@ -1,0 +1,37 @@
+Microsoft Windows [Version 10.0.18363.900]
+(c) 2019 Microsoft Corporation. All rights reserved.
+
+E:\Ebi\Ebi Studies\Udacity Nanodegree Program\Udacity-AWS-Cloud-Architect-master\Projects\Project_03\Exercise_1>aws --version
+aws-cli/2.0.8 Python/3.7.5 Windows/10 botocore/2.0.0dev12
+
+E:\Ebi\Ebi Studies\Udacity Nanodegree Program\Udacity-AWS-Cloud-Architect-master\Projects\Project_03\Exercise_1>aws cloudformation create-stack --region us-east-1 --stack-name c3-s3 --template-body file://c3-s3.yml
+{
+    "StackId": "arn:aws:cloudformation:us-east-1:032426696358:stack/c3-s3/5d4a9760-b852-11ea-b19b-1245bb6cedee"
+}
+
+
+E:\Ebi\Ebi Studies\Udacity Nanodegree Program\Udacity-AWS-Cloud-Architect-master\Projects\Project_03\Exercise_1>aws cloudformation create-stack --region us-east-1 --stack-name c3-vpc --template-body file://c3-vpc.yml
+{
+    "StackId": "arn:aws:cloudformation:us-east-1:032426696358:stack/c3-vpc/738449e0-b852-11ea-b2d4-0a531bfc577e"
+}
+
+
+E:\Ebi\Ebi Studies\Udacity Nanodegree Program\Udacity-AWS-Cloud-Architect-master\Projects\Project_03\Exercise_1>aws cloudformation create-stack --region us-east-1 --stack-name c3-app --template-body file://c3-app.yml --parameters ParameterKey=KeyPair,ParameterValue=udacity-project-03 --capabilities CAPABILITY_IAM
+{
+    "StackId": "arn:aws:cloudformation:us-east-1:032426696358:stack/c3-app/ad731190-b852-11ea-8c2b-0e8a861a6983"
+}
+
+
+E:\Ebi\Ebi Studies\Udacity Nanodegree Program\Udacity-AWS-Cloud-Architect-master\Projects\Project_03\Exercise_1>aws cloudformation create-stack --region us-east-1 --stack-name c3-app --template-body file://c3-app.yml --parameters ParameterKey=KeyPair,ParameterValue=udacity-project-03 --capabilities CAPABILITY_IAM
+{
+    "StackId": "arn:aws:cloudformation:us-east-1:032426696358:stack/c3-app/d7e029d0-b853-11ea-b3b6-0e3edd8361ed"
+}
+
+
+E:\Ebi\Ebi Studies\Udacity Nanodegree Program\Udacity-AWS-Cloud-Architect-master\Projects\Project_03\Exercise_1>aws s3 cp free_recipe.txt s3://cand-c3-free-recipes-032426696358/ --region us-east-1
+upload: .\free_recipe.txt to s3://cand-c3-free-recipes-032426696358/free_recipe.txt
+
+E:\Ebi\Ebi Studies\Udacity Nanodegree Program\Udacity-AWS-Cloud-Architect-master\Projects\Project_03\Exercise_1>aws s3 cp secret_recipe.txt s3://cand-c3-secret-recipes-032426696358/ --region us-east-1
+upload: .\secret_recipe.txt to s3://cand-c3-secret-recipes-032426696358/secret_recipe.txt
+
+E:\Ebi\Ebi Studies\Udacity Nanodegree Program\Udacity-AWS-Cloud-Architect-master\Projects\Project_03\Exercise_1>
