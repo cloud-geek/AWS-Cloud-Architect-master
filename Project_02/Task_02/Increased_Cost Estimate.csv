@@ -9,7 +9,7 @@ My Estimate,US East (Ohio),S3 Standard,0,2304,27648.00,USD,S3 Standard storage (
 My Estimate,US East (Ohio),Data Transfer,0,0,0.00,USD," Inbound (from: Not selected) 0 TB per month 
  Outbound (to: Not selected) 0 TB per month 
 "
-My Estimate,US East (Ohio),Amazon RDS for MySQL,0,8082.352,96988.22,USD,"Quantity (2), Storage for each RDS instance (General Purpose SSD (gp2)), Storage amount (250 GB), Additional backup storage (3 TB)"
+My Estimate,US East (Ohio),Amazon RDS for MySQL,0,9311.912,111742.94,USD,"Quantity (2), Storage for each RDS instance (Provisioned IOPS SSD (io1)), Storage amount (1500 GB), Instance type (db.m5.12xlarge), Additional backup storage (5 TB), Provisioning IOPS (1000)"
 
 
 
