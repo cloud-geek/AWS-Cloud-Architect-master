@@ -5,12 +5,14 @@ My Estimate,US East (Ohio),Data Transfer,0,0,0.00,USD," Inbound (from: Not selec
  Outbound (to: Not selected) 0 TB per month 
 "
 My Estimate,US East (Ohio),Amazon Route 53,0,365,4380.00,USD,Number of Elastic Network Interfaces (4)
-My Estimate,US East (Ohio),Elastic Load Balancing,0,178.85,2146.20,USD,Number of Application Load Balancers (2)
+My Estimate,US East (Ohio),Elastic Load Balancing,0,606.2900000000001,7275.48,USD,Number of Application Load Balancers (2)
 My Estimate,US East (Ohio),Amazon Virtual Private Cloud (VPC),0,155.7,1868.40,USD,Number of NAT Gateways (2)
 My Estimate,US East (Ohio),Amazon CloudWatch,0,300,3600.00,USD,
 My Estimate,US East (Ohio),Amazon EC2,0,1559.3600000000001,18712.32,USD,"Operating system (Linux), Quantity (4), Storage for each EC2 instance (Provisioned IOPS SSD (io1)), Storage amount (2 TB), Provisioning IOPS (1000), Instance type (t3a.xlarge)"
 My Estimate,US East (Ohio),Amazon EC2,0,4098.88,49186.56,USD,"Operating system (Linux), Quantity (4), Storage for each EC2 instance (Provisioned IOPS SSD (io1)), Storage amount (2 TB), Provisioning IOPS (1000), Instance type (c5.9xlarge)"
-My Estimate,US East (Ohio),Amazon Elastic IP,0,7.3,87.60,USD,"Number of EC2 instances (2), Number of EIPs per instance (2)"
+My Estimate,US East (Ohio),Amazon Elastic IP,0,22.9,274.80,USD,"Number of EC2 instances (2), Number of EIPs per instance (2), Number of EIP remaps (10)"
+My Estimate,US East (Ohio),AWS Data Transfer,0,430.08000000000004,5160.96,USD,"Data Transfer, Data transfer cost (430.08000000000004)"
+My Estimate,US East (Ohio),Amazon Elastic IP,0,22.9,274.80,USD,"Number of EC2 instances (2), Number of EIPs per instance (2), Number of EIP remaps (10)"
 
 
 
