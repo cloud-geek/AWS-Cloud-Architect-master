@@ -1,8 +1,8 @@
 # TODO: Designate a cloud provider, region, and credentials
 
 provider "aws" {
-  access_key = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-  secret_key = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+  access_key = "AKIAQPDGID2TLJQABU7R"
+  secret_key = "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"
   region = "us-west-2"
 }
 
@@ -11,7 +11,7 @@ resource "aws_instance" "UdacityT2" {
   ami = "ami-0a243dbef00e96192"
   instance_type = "t2.micro"
   tags = {
-    name = "Udacity T2"
+    Name = "Udacity T2"
   }
 }
 
@@ -20,7 +20,7 @@ resource "aws_instance" "UdacityM4" {
   ami = "ami-0a243dbef00e96192"
   instance_type = "m4.large"
   tags = {
-    name = "Udacity M4"
+    Name = "Udacity M4"
   }
 }
 
